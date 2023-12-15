@@ -6,6 +6,7 @@ import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.context.ApplicationContext;
 import org.springframework.context.annotation.AnnotationConfigApplicationContext;
+import org.springframework.http.converter.json.GsonBuilderUtils;
 
 @SpringBootApplication
 public class ServerSideEventsApplication {
@@ -16,6 +17,6 @@ public class ServerSideEventsApplication {
 
 	ApplicationContext context = new AnnotationConfigApplicationContext(AppConfig.class);
 	WebCafePublisher bean = context.getBean("webCafePublisher", WebCafePublisher.class);
-
+	 
 
 }
