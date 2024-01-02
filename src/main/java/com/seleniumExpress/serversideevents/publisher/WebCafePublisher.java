@@ -1,19 +1,22 @@
 package com.seleniumExpress.serversideevents.publisher;
 
-import com.seleniumExpress.serversideevents.listener.FirstListener;
+import com.seleniumExpress.serversideevents.events.TheRobotEvents;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.context.ApplicationEvent;
+import org.springframework.context.ApplicationEventPublisher;
 import org.springframework.stereotype.Component;
 
 @Component
-public class WebCafePublisher {
+public class WebCafePublisher  {
 
     @Autowired
-     private FirstListener firstListener;
+    ApplicationEventPublisher applicationEventPublisher;
 
     public void streamRobot(String episodeNo){
         System.out.println("Web Cafe : Starting Robot" + episodeNo);
 
-        firstListener.watchRobot(episodeNo);
+        applicationEventPublisher.publishEvent(new TheRobotEvents( episodeNo));
+
 
     }
 }
