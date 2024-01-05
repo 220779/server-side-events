@@ -3,8 +3,11 @@ package com.seleniumExpress.serversideevents.listener;
 
 import com.seleniumExpress.serversideevents.events.TransactionFailureEvent;
 import org.springframework.context.event.EventListener;
+import org.springframework.core.annotation.Order;
 import org.springframework.stereotype.Component;
 
+
+@Order(2)
 @Component
 public class SendEmailListener {
 
