@@ -11,7 +11,7 @@ public class ServerSideEventsApplication {
 	public static void main(String[] args) {
 		ApplicationContext context = new AnnotationConfigApplicationContext(AppConfig.class);
 		GPay bean = context.getBean("GPay", GPay.class);
-		bean.sendMoney("Getter Setter", 500);
+		bean.sendMoney("Getter Setter", 500, true);
 	}
 }
 
