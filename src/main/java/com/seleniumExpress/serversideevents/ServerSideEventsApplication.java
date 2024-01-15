@@ -10,14 +10,16 @@ public class ServerSideEventsApplication {
 
 	public static void main(String[] args) {
 		ApplicationContext context = new AnnotationConfigApplicationContext(AppConfig.class);
+
+
 		WebCafePublisher bean = context.getBean("webCafePublisher", WebCafePublisher.class);
 		bean.streamRobot(" EP: - 004");
 		bean.streamMonthyPhyton(" EP - 007");
 
 
 		WebCafePublisher bean1 = context.getBean("webCafePublisher", WebCafePublisher.class);
-		bean1.streamRobot(" EP: - 004");
-		bean1.streamMonthyPhyton(" EP - 007");
+		bean1.streamRobot(" EP: - 005");
+		bean1.streamMonthyPhyton(" EP - 008");
 	}
 }
 
