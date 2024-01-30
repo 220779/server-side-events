@@ -3,6 +3,7 @@ package com.seleniumExpress.serversideevents.listener;
 import org.springframework.context.event.*;
 import org.springframework.stereotype.Component;
 
+// Multiple listeners in one class with @EventListener
 
 @Component
 public class ApplicationContextRefreshedListener {
@@ -20,7 +21,6 @@ public class ApplicationContextRefreshedListener {
         System.out.println("Application initialized with start...");
         System.out.println(event);
     }
-
 
     @EventListener
     public void handleContextStoppedEvent (ContextStoppedEvent event){
